@@ -1,7 +1,11 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
-   const burger = document.querySelector('.menu__burger');
+window.onload = function () {
+   let preloader = document.getElementById('preloader');
+   preloader.style.display = 'none';
+}
+
+const burger = document.querySelector('.menu__burger');
 const menuBody = document.querySelector('.menu__list');
 const connection = document.querySelector('.connection');
 const request = document.querySelector('.request');
@@ -157,4 +161,3 @@ function checkActiveLangButton() {
 }
 
 checkActiveLangButton()
-})
