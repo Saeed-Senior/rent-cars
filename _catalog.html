@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="fonts/stylesheet.css">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Esla</title>
+   </head>
+<body>
+   <div class="wrapper">
+      <!-- HEADER -->
+      <header class="header">
+         <div class="header__head">
+         <div class="header__container">
+         <div class="header__fixed">
+            <div class="header__inner">
+               <div class="header__logo">
+                  <a href="index.html"><img src="img/logoesla.png" alt=""></a>
+               </div>
+               <nav class="header__menu menu">
+                  <ul class="menu__list">
+                     <li><a href="index.html" class="menu__link" data-lang="home">Главная</a></li>
+                        <li><a href="_catalog.html" class="menu__link" data-lang="catalog">Каталог</a></li>
+                        <li><a href="#" class="menu__link" data-lang="about-us">О нас</a></li>
+                        <li><a href="#" class="menu__link" data-lang="contacts">Контакты</a></li>
+                  </ul>
+               </nav>
+               <div class="header__cookies">
+                  <span class="connection"><a href='tel:+79297777022'>+ 7 (929) 777-70-22</a></span>
+                  <form id="form" class="connection__request request">
+                     <input type="hidden" name="project_name" value="Esla">
+                     <input type="hidden" name="admin_email" value="saeedmuhammad@mail.ru">
+                     <input type="hidden" name="form_subject" value="Elsa.ae">
+                     <div class="request__inner">
+                        <h3 class="request__title" data-lang="request-title">Оставить запрос</h3>
+                     <span class="request__sub-title" data-lang="request-sub-title">Введите свои данные и выберите удобный способ связи</span>
+                     <input id="name" required placeholder="name" name="Имя" type="text" class="request__input">
+                     <input id="phone" required placeholder="+7 (989) 327 - 90 - 09" name="Номер телефона" type="number" class="request__input">
+                     <div class="request__checkboxes">
+                        <input value="whatsapp" id="message1" class="request__checkbox1 request__checkbox" type="radio" name="Мессенджер">
+                        <label class="request__label1" for="message1"></label>
+                        <input value="telegram" id="message2" class="request__checkbox2 request__checkbox" type="radio" name="Мессенджер">
+                        <label class="request__label2" for="message2"></label>
+                        <input value="phone" id="message3" class="request__checkbox3 request__checkbox" type="radio" name="Мессенджер">
+                        <label class="request__label3" for="message3"></label>
+                     </div>
+                     <button class="request__submit" data-lang="request-submit">Отправить</button>
+                     </div>
+                  </form>
+                  <div class="wrap"><span class="wrap__text" data-lang="gratitude">Спасибо за заявку! Наш консультант перезвонит вам в течение часа.</span></div>
+                  <div class="langs">
+                     <a value="ru" data-btn="ru" class="lang rus" translate="no">Ru</a>
+                     <a value="en" data-btn="en" class="lang eng" translate="no">En</a>
+                  </div>
+                  <div class="menu__burger">
+                     <span></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </header>
+
+
+      <!-- MAIN -->
+      <main class="main-content">
+
+         <!-- FILTER -->
+         <section class="filter">
+            <div class="container">
+               <div class="filter__inner">
+                  <h2 class="filter__title catalog-title" data-lang="filter-title">Аренда элитных авто в ДУБАЕ</h2>
+                  <nav class="filter__nav">
+                     <ul class="filter__list">
+                        <li id="filter-all" class="filter__link" data-lang="filter-all-cars">Все автомобили</li>
+                        <li><a id="filter-new" class="filter__link" data-lang="filter-new-cars">Новинки</a></li>
+                     </ul>
+                  </nav>
+                  <div class="filter__choice">
+                     <select class="filter__select" name="" id="filter-price">
+                        <option data-lang="filter-option-price" selected disabled value="">Цена</option>
+                        <option data-lang="all" value="">Все</option>
+                        <option value="200-500">200-500</option>
+                        <option value="500-1000">500-1000</option>
+                        <option value="1000-1500">1000-1500</option>
+                     </select>
+                     <select class="filter__select" name="" id="filter-color">
+                        <option data-lang="filter-option-color" selected disabled value="">Цвет кузова</option>
+                        <option data-lang="all" value="">Все</option>
+                        <option data-lang="black" value="black">Черный</option>
+                        <option data-lang="gray" value="gray">Серый</option>
+                        <option data-lang="white" value="white">Белый</option>
+                     </select>
+                     <select class="filter__select" name="" id="filter-stamps">
+                        <option data-lang="filter-option-stamps" selected disabled value="">Марки</option>
+                        <option data-lang="all" value="">Все</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="tesla">Tesla</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="lamborghini">Lamborghini</option>
+                        <option value="land rover">Land Rover</option>
+                        <option value="chevrolet">Chevrolet</option>
+                        <option value="rolls royce">Rolls Royce</option>
+                        <option value="lexus">Lexus</option>
+                        <option value="GMC">GMC</option>
+                        <option value="kia">Kia</option>
+                        <option value="cadillac">Cadillac</option>
+                        <option value="mercedes">Mercedes</option>
+                     </select>
+                     <select class="filter__select" name="" id="filter-type">
+                        <option data-lang="filter-option-type" selected disabled value="">Типы автомобилей</option>
+                        <option data-lang="all" value="">Все</option>
+                        <option value="SUV" data-lang="SUV">Внедорожники</option>
+                        <option value="sedan" data-lang="sedan">Седан</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- CATALOG-PAGES -->
+         <div class="catalog-pages swiper-container">
+            <div class="catalog-pages__wrapper swiper-wrapper">
+               <section class="catalog swiper-slide">
+                  <div class="container">
+                     <div class="catalog__inner">
+                        <div class="catalog__cards cards">
+
+                        </div>
+                        <div class="catalog__btn">
+                           <!-- <button data-lang="catalog-btn">Показать ещё</button> -->
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="catalog swiper-slide">
+                  <div class="container">
+                     <div class="catalog__inner">
+                        <div class="catalog__cards catalog__cards2 cards">
+
+                        </div>
+                        <div class="catalog__btn">
+                           <!-- <button data-lang="catalog-btn">Показать ещё</button> -->
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+            <div class="container-button">
+               <div class="swiper-button-next"></div>
+               <div class="swiper-pagination-catalog"></div>
+            <div class="swiper-button-prev"></div>
+            </div>
+         </div>
+
+         <section class="form catalog-form">
+            <div class="container">
+            <form class="connection__request" id="form2">
+               <input type="hidden" name="project_name" value="Esla">
+                     <input type="hidden" name="admin_email" value="saeedmuhammad@mail.ru">
+                     <input type="hidden" name="form_subject" value="Elsa.ae">
+               <div class="form__inner">
+                  <h3 class="request__title" data-lang="request-title">Оставить запрос</h3>
+               <span class="request__sub-title form__sub-title" data-lang="request-sub-title">Введите свои данные и выберите удобный способ связи</span>
+               <input id="name" required placeholder="name" name="Имя" type="text" class="request__input">
+               <input id="email" required placeholder="E-mail" type="email" name="Почта" class="request__input">
+               <input id="phone" required placeholder="+7 (989) 327 - 90 - 09" name="Номер телефона" type="number" class="request__input">
+               <button class="request__submit" data-lang="request-submit">Отправить</button>
+               </div>
+            </form>
+         </div>
+         </section>
+
+      </main>
+
+      <footer class="footer">
+         <div class="container">
+            <div class="footer__inner">
+               <div class="footer__logo">
+                  <a href="index.html"><img src="img/footer-logo-esla.png" alt=""></a>
+               </div>
+               <div class="footer__cookies">
+                  <span class="connection"><a href='tel:+79297777022'>+ 7 (929) 777-70-22</a></span>
+                  <div class="langs footer__langs">
+                     <a value="ru" data-btn="ru" class="lang rus" translate="no">Ru</a>
+                     <a value="en" data-btn="en" class="lang eng" translate="no">En</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+      </div>
+      <script src="js/cars.js"></script>
+   <script src="js/filter.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <script src="mail.js"></script>
+   <script src="js/langs.js"></script>
+   <script src="js/script.js"></script>
+</body>
+</html>
