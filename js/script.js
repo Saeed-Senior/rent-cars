@@ -1,6 +1,6 @@
 'use strict';
 
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
    const burger = document.querySelector('.menu__burger');
 const menuBody = document.querySelector('.menu__list');
 const connection = document.querySelector('.connection');
