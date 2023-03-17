@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link
-   rel="stylesheet"
-   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
    <link rel="stylesheet" href="css/style.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,22 +110,22 @@
                         <option value="new">new</option>
                      </select> -->
                   </nav>
-                  <div class="filter__choice">
-                     <select class="filter__select" name="" id="filter-price">
+                  <div class="filter__choice" translate="yes">
+                     <select class="filter__select js-choice1" name="" id="filter-price">
                         <option data-lang="filter-option-price" selected disabled value="">Цена</option>
                         <option data-lang="all" value="">Все</option>
                         <option value="200-500">200-500</option>
                         <option value="500-1000">500-1000</option>
                         <option value="1000-1500">1000-1500</option>
                      </select>
-                     <select class="filter__select" name="" id="filter-color">
+                     <select class="filter__select js-choice2" name="" id="filter-color">
                         <option data-lang="filter-option-color" selected disabled value="">Цвет кузова</option>
                         <option data-lang="all" value="">Все</option>
                         <option data-lang="black" value="black">Черный</option>
                         <option data-lang="gray" value="gray">Серый</option>
                         <option data-lang="white" value="white">Белый</option>
                      </select>
-                     <select class="filter__select" name="" id="filter-stamps">
+                     <select class="filter__select js-choice3" name="" id="filter-stamps">
                         <option data-lang="filter-option-stamps" selected disabled value="">Марки</option>
                         <option data-lang="all" value="">Все</option>
                         <option value="toyota">Toyota</option>
@@ -142,7 +141,7 @@
                         <option value="cadillac">Cadillac</option>
                         <option value="mercedes">Mercedes</option>
                      </select>
-                     <select class="filter__select" name="" id="filter-type">
+                     <select class="filter__select js-choice4" name="" id="filter-type">
                         <option data-lang="filter-option-type" selected disabled value="">Типы автомобилей</option>
                         <option data-lang="all" value="">Все</option>
                         <option value="SUV" data-lang="SUV">Внедорожники</option>
@@ -320,6 +319,7 @@
       </footer>
 
    </div>
+   <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
    <script src="mail.js"></script>

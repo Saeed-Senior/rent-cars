@@ -766,35 +766,34 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
-.filter__select {
-  display: block;
-  cursor: pointer;
-  font-size: 21px;
-  color: #717171;
-  padding: 0px 22px;
-  height: 56px;
-  box-sizing: border-box;
-  margin: 0;
-  border: 1px solid #CED3D6;
-  border-radius: 8px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #fbfbfb;
-  background-repeat: no-repeat, repeat;
-  background-image: url(../img/Vector.png);
-  background-position: right 0.7em top 50%, 0 0;
-  background-size: 0.65em auto, 100%;
-  transition: 0.2s;
+
+.choices__inner {
+  border-radius: 10px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
-.filter__select:hover {
-  background-color: rgb(196, 195, 195);
+
+.choices[data-type*=select-one]::after {
+  height: 12px;
+  width: 12px;
+  top: 40%;
+  border: 2px solid #9A9A9A;
+  border-width: 0 0 2px 2px;
+  transform: rotate(-45deg);
 }
-@media (max-width: 768px) {
-  .filter__select {
-    width: 100%;
-    font-size: 16px;
-  }
+
+.choices[data-type*=select-one].is-open::after {
+  top: 60%;
+  border: 2px solid #9A9A9A;
+  border-width: 2px 2px 0 0;
+}
+
+.choices__list--dropdown {
+  z-index: 5;
 }
 
 .catalog__btn {

@@ -1,4 +1,23 @@
-   //========================================================================FILTER
+//const choiceEl = document.querySelectorAll('.filter__select')
+
+const choices1 = new Choices('.js-choice1', {
+   searchEnabled: false,
+   itemSelectText: '',
+});
+const choices2 = new Choices('.js-choice2', {
+   searchEnabled: false,
+   itemSelectText: '',
+});
+const choices3 = new Choices('.js-choice3', {
+   searchEnabled: false,
+   itemSelectText: '',
+});
+const choices4 = new Choices('.js-choice4', {
+   searchEnabled: false,
+   itemSelectText: '',
+});
+
+//========================================================================FILTER
 
 const domElements = {
    result: document.querySelector('.catalog__cards'),
