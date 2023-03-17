@@ -118,7 +118,7 @@ function filterSelect(filterType) {
       })
 
       const allLangs = ['ru', 'en',];
-let currentLang = localStorage.getItem('language') || navigator.language || 'ru';
+let currentLang = localStorage.getItem('language') || checkBrowserLang() || 'ru';
 const lang = document.querySelectorAll("[data-btn]");
 const currentPathName = window.location.pathname;
 let currentTextObject = {};
@@ -182,6 +182,16 @@ function checkActiveLangButton() {
 }
 checkActiveLangButton()
    }
+   function checkBrowserLang() {
+      const navLang = navigator.language.slice(0,2).toLowerCase
+      ()
+      const result = allLangs.some(el => {
+         return el === navLang;
+      })
+      if (result) {
+         return navLang;
+      }
+   };
 }
 // Отслеживание изменений фильтров и фильтрации
 filtersType.forEach(type => {
