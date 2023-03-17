@@ -203,5 +203,3 @@ function checkBrowserLang() {
       return navLang;
    }
 };
-
-
