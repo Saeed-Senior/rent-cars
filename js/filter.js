@@ -1,23 +1,4 @@
-//const choiceEl = document.querySelectorAll('.filter__select')
-
-const choices1 = new Choices('.js-choice1', {
-   searchEnabled: false,
-   itemSelectText: '',
-});
-const choices2 = new Choices('.js-choice2', {
-   searchEnabled: false,
-   itemSelectText: '',
-});
-const choices3 = new Choices('.js-choice3', {
-   searchEnabled: false,
-   itemSelectText: '',
-});
-const choices4 = new Choices('.js-choice4', {
-   searchEnabled: false,
-   itemSelectText: '',
-});
-
-//========================================================================FILTER
+   //========================================================================FILTER
 
 const domElements = {
    result: document.querySelector('.catalog__cards'),
@@ -35,7 +16,7 @@ all.addEventListener('click', (e) => {
 // Генерация карточек
 function generait(data) {
    const cards = [];
-   for (var i = 0; i < data.length; i++) { 
+   for (let i = 0; i < data.length; i++) { 
       cards.push(`
       <div class="catalog__card card">
                         <div class="card__image second-slider swiper-container">
@@ -66,7 +47,7 @@ const newCars = document.getElementById('filter-new');
 newCars.addEventListener('click', (e) => {
    function generait(data) {
       const cards = [];
-      for (var i = 0; i < data.length; i++) { 
+      for (let i = 0; i < data.length; i++) { 
          if (data[i].new === '') continue;
          cards.push(`
          <div class="catalog__card card">
@@ -137,7 +118,7 @@ function filterSelect(filterType) {
       })
 
       const allLangs = ['ru', 'en',];
-let currentLang = localStorage.getItem('language') || navigator.language || 'ru';
+let currentLang = localStorage.getItem('language') || checkBrowserLang() || 'ru';
 const lang = document.querySelectorAll("[data-btn]");
 const currentPathName = window.location.pathname;
 let currentTextObject = {};
@@ -201,6 +182,16 @@ function checkActiveLangButton() {
 }
 checkActiveLangButton()
    }
+   function checkBrowserLang() {
+      const navLang = navigator.language.slice(0,2).toLowerCase
+      ()
+      const result = allLangs.some(el => {
+         return el === navLang;
+      })
+      if (result) {
+         return navLang;
+      }
+   };
 }
 // Отслеживание изменений фильтров и фильтрации
 filtersType.forEach(type => {
@@ -209,7 +200,7 @@ filtersType.forEach(type => {
 
 //Проверка по значениям соседних фильтров
 function checkOtherFilters(filtersType, filtered) {
-var updateFiltered = filtered;
+let updateFiltered = filtered;
 filtersType.forEach(type => {
    const value = domElements.filters[type].value;
    const reg = new RegExp(value);

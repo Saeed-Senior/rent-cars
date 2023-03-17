@@ -166,7 +166,7 @@ const cars = [
       "price": {
          "day": 402,
       },
-      "color": 'black',
+      "color": 'white',
    },
    {
       "id": 14,
