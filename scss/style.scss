@@ -950,6 +950,68 @@ padding: 120px 0 48px;
    }
 }
 
+// --ACCARDEON
+
+.accardeon {
+padding-bottom: 0 0 150px;
+@media(max-width:1300px){
+   padding-bottom: calc(100px + (150 - 100) * ((100vw - 400px) / (1300 - 400)))
+   }
+   &__title{
+      font-weight: 700;
+      font-size: 56px;
+      margin-bottom: 40px;
+      @media(max-width:1300px){
+         font-size: calc(36px + (56 - 36) * ((100vw - 400px) / (1300 - 400)))
+         }
+   }
+   &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      cursor: pointer;
+      font-weight: 600;
+font-size: 24px;
+padding: 0 0 24px;
+@media(max-width:1300px){
+   font-size: calc(18px + (24 - 18) * ((100vw - 400px) / (1300 - 400)))
+   }
+img{
+   transition: .3s;
+   max-width: 12px;
+   max-height: 12px;
+}
+img.active{
+transform: rotate(180deg);
+}
+   }
+
+   &__content {
+      max-height: 0px;
+      overflow: hidden;
+      transition: .3s;
+      font-size: 18px;
+      line-height: 156%;
+      color: #70777A;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #E6EDF0;
+      @media(max-width:1300px){
+         font-size: calc(14px + (18 - 14) * ((100vw - 400px) / (1300 - 400)))
+         }
+      span{
+         display: inline-block;
+         max-width: 1150px;
+      }
+   }
+}
+.accardeon__content.active{
+   max-height: max-content;
+   overflow: visible;
+   
+}
+
+// --FOOTER
 .footer {
 background-color: #070531;
    &__inner {
@@ -958,25 +1020,49 @@ background-color: #070531;
       align-items: center;
       padding: 22px 0;
       span{
+         display: block;
          a{
+            display: block;
+            margin: 20px 0;
+            font-size: 20px;
             color: white;
          }
+         color: white;
+      }
+      @media(max-width:400px){
+         flex-direction: column;
+         align-items: flex-start;
       }
    }
 
    &__logo {
       max-width: 117px;
+      align-self: start;
       img{
          width: 100%;
       }
    }
-}
-.footer__langs{
-   margin-top: 5px;
-   a{
+
+   &__messanger {
+      display: flex;
+      gap: 15px;
+      img{
+         max-width: 35px;
+      }
+   }
+   &__contacts{
+      display: none;
       color: white;
    }
+   @media(max-width:400px){
+      &__contacts{
+         display: block;
+         font-size: 18px;
+         margin: 15px 0;
+      }
+   }
 }
+
 
 // ---CATALOG-PAGES
 

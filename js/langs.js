@@ -204,4 +204,24 @@ const multi = {
          "ru": 'пополнить',
          "en": 'top up',
       },
+      "faq1": {
+         "ru": '1. Что включает в себя предложение по аренде автомобилей?',
+         "en": '1. What does the car rental offer include?',
+      },
+      "faq2": {
+         "ru": '2. Я хочу оплатить за аренду автомобиля наличными — могу ли я это сделать?',
+         "en": '2. I want to pay for my car rental in cash - can I do that?',
+      },
+      "faq3": {
+         "ru": '3. Какое у меня должно быть водительское удостоверение?',
+         "en": '3. What type of drivers license should I have?',
+      },
+      "faq4": {
+         "ru": '4. Я хочу взять автомобиль в аренду в нерабочее время — это возможно?',
+         "en": '4. I want to rent a car after business hours - is it possible?',
+      },
+      "faq5": {
+         "ru": '5. В каких случаях можно отменить сделку?',
+         "en": '5. When can a transaction be cancelled?',
+      },
    }

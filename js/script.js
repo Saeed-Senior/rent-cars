@@ -60,6 +60,14 @@ request.addEventListener('click', (e) => {
    }
 })
 
+//=======================================================================ACCARDEON
+const accardeonBtn = document.querySelectorAll('.accardeon__btn').forEach(item => {
+item.addEventListener('click', () => {
+   item.nextElementSibling.classList.toggle('active');
+   item.lastElementChild.classList.toggle('active');
+})
+})
+
 
 //=================================Swiper====================================================
 
@@ -71,6 +79,15 @@ const firstSlider = new Swiper('.first-slider', {
    // },
 
 });
+
+const secondSlider = new Swiper('.second-slider', {
+
+   pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+   },
+
+})
 
 const thirdSlider = new Swiper('.catalog-pages', {
    navigation: {
@@ -86,6 +103,20 @@ const thirdSlider = new Swiper('.catalog-pages', {
    },
    simulateTouch: false,
    allowTouchMove: false,
+})
+
+const fourthSlider = new Swiper('.car-info__image', {
+
+   navigation: {
+      nextEl: '.swiper-button-next-car',
+      prevEl: '.swiper-button-prev-car',
+   },
+
+pagination: {
+   el: '.swiper-pagination-more',
+   clickable: true,
+},
+
 })
 
 //=================================language==================================================
