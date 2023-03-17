@@ -35,7 +35,7 @@ all.addEventListener('click', (e) => {
 // Генерация карточек
 function generait(data) {
    const cards = [];
-   for (let i = 0; i < data.length; i++) { 
+   for (var i = 0; i < data.length; i++) { 
       cards.push(`
       <div class="catalog__card card">
                         <div class="card__image second-slider swiper-container">
@@ -66,7 +66,7 @@ const newCars = document.getElementById('filter-new');
 newCars.addEventListener('click', (e) => {
    function generait(data) {
       const cards = [];
-      for (let i = 0; i < data.length; i++) { 
+      for (var i = 0; i < data.length; i++) { 
          if (data[i].new === '') continue;
          cards.push(`
          <div class="catalog__card card">
@@ -209,7 +209,7 @@ filtersType.forEach(type => {
 
 //Проверка по значениям соседних фильтров
 function checkOtherFilters(filtersType, filtered) {
-let updateFiltered = filtered;
+var updateFiltered = filtered;
 filtersType.forEach(type => {
    const value = domElements.filters[type].value;
    const reg = new RegExp(value);
