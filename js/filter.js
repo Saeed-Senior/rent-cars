@@ -29,14 +29,14 @@ function generait(data) {
                            <div class="card-pagination swiper-pagination"></div>
                         </div>
                         <div class="card__information">
-                           <h3 class="card__name" translate='no'>${data[i].name} <span class="card__new">${data[i].new}</span></h3>
-                           <div class="card__buttons">
-                           <button class="card__first-button" data-lang='booking'>Бронировать</button>
-                           <a href="_more.html?${data[i].image1}&${data[i].name}&${data[i].price.day}" class="card__second-button" data-lang='more'>Подробнее</a>
-                           </div>
+                        <h3 class="card__name" translate='no'>${data[i].name} <span class="card__new">${data[i].new}</span></h3>
+                        <div class="card__buttons">
+                        <button class="card__first-button" data-lang='booking'>Бронировать</button>
+                        <a href="_more.html?${data[i].image1}&${data[i].name}&${data[i].price.day}" class="card__second-button" data-lang='more'>Подробнее</a>
                         </div>
-                     </div>
-      `)
+                        </div>
+                    </div>
+    `)
     }
 
     return cards;
@@ -52,9 +52,9 @@ newCars.addEventListener('click', (e) => {
         for (let i = 0; i < data.length; i++) {
             if (data[i].new === '') continue;
             cards.push(`
-         <div class="catalog__card card">
-                           <div class="card__image second-slider swiper-container">
-                              <div class="swiper-wrapper">
+        <div class="catalog__card card">
+                        <div class="card__image second-slider swiper-container">
+                            <div class="swiper-wrapper">
                                  <div class="swiper-slide">
                                     <img src="${data[i].image1}" alt="">
                                  </div>
@@ -121,7 +121,7 @@ const filtersType = [
             })
 
             const allLangs = ['ru', 'en',];
-            let currentLang = localStorage.getItem('language') || navigator.language || 'ru';
+            let currentLang = localStorage.getItem('language') || checkBrowserLang() || 'ru';
             const lang = document.querySelectorAll("[data-btn]");
             const currentPathName = window.location.pathname;
             let currentTextObject = {};
@@ -191,6 +191,17 @@ const filtersType = [
             }
 
             checkActiveLangButton()
+
+            function checkBrowserLang() {
+                const navLang = navigator.language.slice(0,2).toLowerCase
+                ()
+                const result = allLangs.some(el => {
+                   return el === navLang;
+                })
+                if (result) {
+                   return navLang;
+                }
+             };
         }
     }
 
