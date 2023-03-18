@@ -1,23 +1,24 @@
-   //========================================================================FILTER
+//========================================================================FILTER
 
 const domElements = {
-   result: document.querySelector('.catalog__cards'),
-   filters: {
-      color: document.getElementById('filter-color'),
-      priceFilter: document.getElementById('filter-price'),
-      stamps: document.getElementById('filter-stamps'),
-      type: document.getElementById('filter-type'),
-   }
+    result: document.querySelector('.catalog__cards'),
+    filters: {
+        color: document.getElementById('filter-color'),
+        priceFilter: document.getElementById('filter-price'),
+        stamps: document.getElementById('filter-stamps'),
+        type: document.getElementById('filter-type'),
+    }
 }
 const all = document.getElementById('filter-all');
 all.addEventListener('click', (e) => {
-   location.reload()
+    location.reload()
 })
+
 // Генерация карточек
 function generait(data) {
-   const cards = [];
-   for (let i = 0; i < data.length; i++) { 
-      cards.push(`
+    const cards = [];
+    for (let i = 0; i < data.length; i++) {
+        cards.push(`
       <div class="catalog__card card">
                         <div class="card__image second-slider swiper-container">
                            <div class="swiper-wrapper">
@@ -36,20 +37,21 @@ function generait(data) {
                         </div>
                      </div>
       `)
-   }
+    }
 
-   return cards;
+    return cards;
 }
+
 const cardsArr = generait(cars);
 domElements.result.innerHTML = cardsArr.join('');
 
 const newCars = document.getElementById('filter-new');
 newCars.addEventListener('click', (e) => {
-   function generait(data) {
-      const cards = [];
-      for (let i = 0; i < data.length; i++) { 
-         if (data[i].new === '') continue;
-         cards.push(`
+    function generait(data) {
+        const cards = [];
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].new === '') continue;
+            cards.push(`
          <div class="catalog__card card">
                            <div class="card__image second-slider swiper-container">
                               <div class="swiper-wrapper">
@@ -68,153 +70,152 @@ newCars.addEventListener('click', (e) => {
                            </div>
                         </div>
          `)
-      }
-   
-      return cards;
-   }
-   const cardsArr = generait(cars);
-   domElements.result.innerHTML = cardsArr.join('');
-})
+        }
 
+        return cards;
+    }
+
+    const cardsArr = generait(cars);
+    domElements.result.innerHTML = cardsArr.join('');
+})
+const filtersType = [
+    'color',
+    'priceFilter',
+    'stamps',
+    'type',
+]
 //---Filter
 {
-   const filtersType = [
-      'color',
-      'priceFilter',
-      'stamps',
-      'type',
-   ]
 
-   // Функция фильтрации товаров по списку параметров 
-function filterSelect(filterType) {
-   domElements.filters[filterType].onchange = (e) => {
-      const value = e.target.value;
-   
-      const filtered = cars.filter(car => {
-         const reg = new RegExp(value);
-         if (reg.test(car[filterType])) {
-            return true;
-         } else {
-            return false;
-         }
-      })
-      const fullFiltered = checkOtherFilters(filtersType, filtered)
-      const filteredCards = generait(fullFiltered);
-      domElements.result.innerHTML = filteredCards.join('');
-      const secondSlider = new Swiper('.second-slider', {
 
-         pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-         },
-      
-      })
-      const request = document.querySelector('.request');
-      const buttonBook = document.querySelectorAll('.card__first-button');
-      buttonBook.forEach((item) => {
-         return (item.addEventListener('click', () => {
-         request.classList.add('request__active');
-         }))
-      })
+    // Функция фильтрации товаров по списку параметров
+    function filterSelect(filterType) {
+        domElements.filters[filterType].onchange = (e) => {
+            const value = e.target.value;
 
-      const allLangs = ['ru', 'en',];
-let currentLang = localStorage.getItem('language') || checkBrowserLang() || 'ru';
-const lang = document.querySelectorAll("[data-btn]");
-const currentPathName = window.location.pathname;
-let currentTextObject = {};
-function check() {
-   switch (currentPathName) {
-      case '/index.html':
-         currentTextObject = multi;
-      break;
-      case '/_catalog.html':
-         currentTextObject = multi;
-      break;
-      case '/_more.html':
-         currentTextObject = multi;
-      break;
-         default:
-            currentTextObject = multi;
-            break;
-   }
-}
-check();
-function changeLang() {
-   for (const key in currentTextObject) {
-      let elem = document.querySelectorAll(`[data-lang=${key}]`);
-      elem.forEach((el) => {
-         if(el){
-            el.textContent = currentTextObject[key][currentLang]
-         }
-      })
-   }
-}
-changeLang()
-lang.forEach(btn => {
-   btn.addEventListener('click', (e) => {
-      currentLang = e.target.dataset.btn;
-      localStorage.setItem('language', e.target.dataset.btn)
-      resetActiveClass(lang, 'active')
-      btn.classList.add('active')
-      changeLang()
-   })
-});
-function resetActiveClass(arr, active) {
-   arr.forEach(elem => {
-      elem.classList.remove(active)
-   })
-}
-function checkActiveLangButton() {
-   switch (currentLang) {
-      case 'ru':
-         document.querySelector("[data-btn='ru']")
-         .classList.add('active');
-         break;
-         case 'en':
-         document.querySelector("[data-btn='en']")
-         .classList.add('active');
-         break;
-         default:
-            document.querySelector("[data-btn='ru']")
-         .classList.add('active');
-            break;
-   }
-}
-checkActiveLangButton()
-   }
-   function checkBrowserLang() {
-      const navLang = navigator.language.slice(0,2).toLowerCase
-      ()
-      const result = allLangs.some(el => {
-         return el === navLang;
-      })
-      if (result) {
-         return navLang;
-      }
-   };
-}
+            const filtered = cars.filter(car => {
+                const reg = new RegExp(value);
+                if (reg.test(car[filterType])) {
+                    return true;
+                } else {
+                    return false;
+                }
+            })
+            const fullFiltered = checkOtherFilters(filtersType, filtered)
+            const filteredCards = generait(fullFiltered);
+            domElements.result.innerHTML = filteredCards.join('');
+            const secondSlider = new Swiper('.second-slider', {
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+            })
+            const request = document.querySelector('.request');
+            const buttonBook = document.querySelectorAll('.card__first-button');
+            buttonBook.forEach((item) => {
+                return (item.addEventListener('click', () => {
+                    request.classList.add('request__active');
+                }))
+            })
+
+            const allLangs = ['ru', 'en',];
+            let currentLang = localStorage.getItem('language') || navigator.language || 'ru';
+            const lang = document.querySelectorAll("[data-btn]");
+            const currentPathName = window.location.pathname;
+            let currentTextObject = {};
+
+            function check() {
+                switch (currentPathName) {
+                    case '/index.html':
+                        currentTextObject = multi;
+                        break;
+                    case '/_catalog.html':
+                        currentTextObject = multi;
+                        break;
+                    case '/_more.html':
+                        currentTextObject = multi;
+                        break;
+                    default:
+                        currentTextObject = multi;
+                        break;
+                }
+            }
+
+            check();
+
+            function changeLang() {
+                for (const key in currentTextObject) {
+                    let elem = document.querySelectorAll(`[data-lang=${key}]`);
+                    elem.forEach((el) => {
+                        if (el) {
+                            el.textContent = currentTextObject[key][currentLang]
+                        }
+                    })
+                }
+            }
+
+            changeLang()
+            lang.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    currentLang = e.target.dataset.btn;
+                    localStorage.setItem('language', e.target.dataset.btn)
+                    resetActiveClass(lang, 'active')
+                    btn.classList.add('active')
+                    changeLang()
+                })
+            });
+
+            function resetActiveClass(arr, active) {
+                arr.forEach(elem => {
+                    elem.classList.remove(active)
+                })
+            }
+
+            function checkActiveLangButton() {
+                switch (currentLang) {
+                    case 'ru':
+                        document.querySelector("[data-btn='ru']")
+                            .classList.add('active');
+                        break;
+                    case 'en':
+                        document.querySelector("[data-btn='en']")
+                            .classList.add('active');
+                        break;
+                    default:
+                        document.querySelector("[data-btn='ru']")
+                            .classList.add('active');
+                        break;
+                }
+            }
+
+            checkActiveLangButton()
+        }
+    }
+
 // Отслеживание изменений фильтров и фильтрации
-filtersType.forEach(type => {
-   filterSelect(type)
-})
+    filtersType.forEach(type => {
+        filterSelect(type)
+    })
 
 //Проверка по значениям соседних фильтров
-function checkOtherFilters(filtersType, filtered) {
-let updateFiltered = filtered;
-filtersType.forEach(type => {
-   const value = domElements.filters[type].value;
-   const reg = new RegExp(value);
-   const newFiltered = updateFiltered.filter(card => {
-      if(reg.test(card[type])) {
-         return true;
-      } else {
-         return false;
-      }
-   })
-   updateFiltered = newFiltered
-})
-return updateFiltered;
-}
+    function checkOtherFilters(filtersType, filtered) {
+        let updateFiltered = filtered;
+        filtersType.forEach(type => {
+            const value = domElements.filters[type].value;
+            const reg = new RegExp(value);
+            const newFiltered = updateFiltered.filter(card => {
+                if (reg.test(card[type])) {
+                    return true;
+                } else {
+                    return false;
+                }
+            })
+            updateFiltered = newFiltered
+        })
+        return updateFiltered;
+    }
 }
 
 //==================================================================================HITS
