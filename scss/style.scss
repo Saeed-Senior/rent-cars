@@ -704,14 +704,19 @@ padding: 120px 0 48px;
 
    &__list {
       display: flex;
-      gap: 32px;
       margin: 48px 0;
+      li{
+         margin-right: 32px;
+         &:last-child{
+            margin-right: 0;
+         }
+      @media(max-width:768px){
+            margin-right: calc(14px + (32 - 14) * ((100vw - 400px) / (768 - 400)));
+         }
+      }
       @media(max-width:1330px){
          margin:calc(20px + (48 - 20) * ((100vw - 320px) / (1330 - 320))) 0;
          }
-         @media(max-width:768px){
-            gap: calc(14px + (32 - 14) * ((100vw - 400px) / (768 - 400)));
-            }
    }
 
    &__link {
@@ -969,7 +974,6 @@ padding-bottom: 0 0 150px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
       cursor: pointer;
       font-weight: 600;
 font-size: 24px;
@@ -981,6 +985,7 @@ img{
    transition: .3s;
    max-width: 12px;
    max-height: 12px;
+   margin-left: 10px;
 }
 img.active{
 transform: rotate(180deg);
@@ -988,7 +993,7 @@ transform: rotate(180deg);
    }
 
    &__content {
-      max-height: 0px;
+      height: 0px;
       overflow: hidden;
       transition: .3s;
       font-size: 18px;
@@ -1006,7 +1011,7 @@ transform: rotate(180deg);
    }
 }
 .accardeon__content.active{
-   max-height: max-content;
+   height: auto;
    overflow: visible;
    
 }
@@ -1045,7 +1050,12 @@ background-color: #070531;
 
    &__messanger {
       display: flex;
-      gap: 15px;
+      li{
+         margin-right: 15px;
+         &:last-child{
+            margin-right: 0;
+         }
+      }
       img{
          max-width: 35px;
       }
@@ -1054,7 +1064,7 @@ background-color: #070531;
       display: none;
       color: white;
    }
-   @media(max-width:400px){
+   @media(max-width:500px){
       &__contacts{
          display: block;
          font-size: 18px;

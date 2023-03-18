@@ -33,8 +33,8 @@ const multi = {
          "en": 'Send',
       },
       "main-title": {
-         "ru": 'Аренда элитных электромобилей',
-         "en": 'Luxury electric car rental',
+         "ru": 'Аренда элитных автомобилей',
+         "en": 'Luxury car rental',
       },
       "main-btn": {
          "ru": 'Список автомобилей',

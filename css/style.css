@@ -725,17 +725,22 @@ h2 {
 }
 .filter__list {
   display: flex;
-  gap: 32px;
   margin: 48px 0;
+}
+.filter__list li {
+  margin-right: 32px;
+}
+.filter__list li:last-child {
+  margin-right: 0;
+}
+@media (max-width: 768px) {
+  .filter__list li {
+    margin-right: calc(14px + 18 * (100vw - 400px) / 368);
+  }
 }
 @media (max-width: 1330px) {
   .filter__list {
     margin: calc(20px + 28 * (100vw - 320px) / 1010) 0;
-  }
-}
-@media (max-width: 768px) {
-  .filter__list {
-    gap: calc(14px + 18 * (100vw - 400px) / 368);
   }
 }
 .filter__link {
@@ -1007,7 +1012,6 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
   cursor: pointer;
   font-weight: 600;
   font-size: 24px;
@@ -1022,12 +1026,13 @@ h2 {
   transition: 0.3s;
   max-width: 12px;
   max-height: 12px;
+  margin-left: 10px;
 }
 .accardeon__btn img.active {
   transform: rotate(180deg);
 }
 .accardeon__content {
-  max-height: 0px;
+  height: 0px;
   overflow: hidden;
   transition: 0.3s;
   font-size: 18px;
@@ -1047,8 +1052,7 @@ h2 {
 }
 
 .accardeon__content.active {
-  max-height: -moz-max-content;
-  max-height: max-content;
+  height: auto;
   overflow: visible;
 }
 
@@ -1086,7 +1090,12 @@ h2 {
 }
 .footer__messanger {
   display: flex;
-  gap: 15px;
+}
+.footer__messanger li {
+  margin-right: 15px;
+}
+.footer__messanger li:last-child {
+  margin-right: 0;
 }
 .footer__messanger img {
   max-width: 35px;
@@ -1095,7 +1104,7 @@ h2 {
   display: none;
   color: white;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .footer__contacts {
     display: block;
     font-size: 18px;
