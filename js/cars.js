@@ -37,7 +37,7 @@ const cars = [
       "price": {
          "day": 489,
       },
-      "color": 'white',
+      "color": 'black',
    },
    {
       "id": 4,
@@ -166,7 +166,7 @@ const cars = [
       "price": {
          "day": 402,
       },
-      "color": 'black',
+      "color": 'white',
    },
    {
       "id": 14,
@@ -219,6 +219,19 @@ const cars = [
          "day": 1.073,
       },
       "color": 'gray',
+   },
+   {
+      "id": 18,
+      "image1": 'img/car18.jpg',
+      "name":'Ford Mustang',
+      "stamps": 'Mustang',
+      "type": 'sedan',
+      "new":'new',
+      "priceFilter": '200-500',
+      "price": {
+         "day": 290,
+      },
+      "color": 'red',
    },
 ]
 
