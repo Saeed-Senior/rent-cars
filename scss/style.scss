@@ -196,6 +196,7 @@ body{
    font-weight: 400;
    color: #171717;
    font-size: 20px;
+   background-color: #fff;
    @media(max-width:1330px){
       font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1330 - 320)))
       }

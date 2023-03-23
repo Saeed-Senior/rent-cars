@@ -172,6 +172,7 @@ body {
   font-weight: 400;
   color: #171717;
   font-size: 20px;
+  background-color: #fff;
 }
 @media (max-width: 1330px) {
   body {
