@@ -635,31 +635,25 @@ h2 {
 .main__title {
   position: relative;
   z-index: 10;
-  text-align: center;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 110%;
   color: white;
-  max-width: 700px;
+  width: 353px;
+  height: 185px;
   padding: 0 10px;
-  margin-top: 140px;
+  margin-top: 17%;
+}
+.main__title img {
+  width: 100%;
 }
 @media (max-width: 1330px) {
   .main__title {
-    font-size: calc(48px + 16 * (100vw - 768px) / 562);
-    margin-top: calc(70px + 70 * (100vw - 768px) / 562);
-  }
-}
-@media (max-width: 400px) {
-  .main__title {
-    font-size: 32px;
+    width: calc(211px + 142 * (100vw - 390px) / 940);
+    height: calc(111px + 74 * (100vw - 390px) / 940);
   }
 }
 .main__btn {
-  position: absolute;
+  margin-top: 100px;
   display: block;
   z-index: 11;
-  bottom: 48px;
   background-color: transparent;
   border: 1px solid #fff;
   color: white;
@@ -674,7 +668,9 @@ h2 {
 }
 @media (max-width: 1330px) {
   .main__btn {
+    margin-top: calc(32px + 68 * (100vw - 320px) / 1010);
     width: calc(200px + 280 * (100vw - 320px) / 1010);
+    height: calc(40px + 16 * (100vw - 320px) / 1010);
     font-size: calc(16px + 4 * (100vw - 320px) / 1010);
   }
 }
@@ -1023,7 +1019,6 @@ h2 {
   }
 }
 .accardeon__btn img {
-  transition: 0.3s;
   max-width: 12px;
   max-height: 12px;
   margin-left: 10px;
@@ -1034,7 +1029,6 @@ h2 {
 .accardeon__content {
   height: 0px;
   overflow: hidden;
-  transition: 0.3s;
   font-size: 18px;
   line-height: 156%;
   color: #70777A;

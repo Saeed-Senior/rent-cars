@@ -24,7 +24,7 @@ const cars = [
       "price": {
          "day": 1.554,
       },
-      "color": 'gray',
+      "color": 'black',
    },
    {
       "id": 3,
@@ -37,7 +37,7 @@ const cars = [
       "price": {
          "day": 489,
       },
-      "color": 'black',
+      "color": 'white',
    },
    {
       "id": 4,

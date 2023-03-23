@@ -626,27 +626,23 @@ height: 56px;
 		&__title {
          position: relative;
          z-index: 10;
-         text-align: center;
-         font-weight: 700;
-font-size: 64px;
-line-height: 110%;
 color: white;
-max-width: 700px;
+width: 353px;
+height: 185px;
 padding: 0 10px;
-margin-top: 140px;
+margin-top: 17%;
+img{
+   width: 100%;
+}
 @media(max-width:1330px){
-   font-size: calc(48px + (64 - 48) * ((100vw - 768px) / (1330 - 768)));
-   margin-top: calc(70px + (140 - 70) * ((100vw - 768px) / (1330 - 768)));
-   }
-   @media(max-width:400px){
-   font-size: 32px;
+   width: calc(211px + (353 - 211) * ((100vw - 390px) / (1330 - 390)));
+   height: calc(111px + (185 - 111) * ((100vw - 390px) / (1330 - 390)));
    }
 		}
 		&__btn {
-         position: absolute;
+         margin-top: 100px;
          display: block;
          z-index: 11;
-         bottom: 48px;
          background-color: transparent;
          border: 1px solid #fff;
          color: white;
@@ -659,7 +655,9 @@ margin-top: 140px;
          align-items: center;
          transition: .2s;
          @media(max-width:1330px){
+            margin-top: calc(32px + (100 - 32) * ((100vw - 320px) / (1330 - 320)));
             width: calc(200px + (480 - 200) * ((100vw - 320px) / (1330 - 320)));
+            height: calc(40px + (56 - 40) * ((100vw - 320px) / (1330 - 320)));
             font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1330 - 320)))
             }
          &:hover{
@@ -982,7 +980,6 @@ padding: 0 0 24px;
    font-size: calc(18px + (24 - 18) * ((100vw - 400px) / (1300 - 400)))
    }
 img{
-   transition: .3s;
    max-width: 12px;
    max-height: 12px;
    margin-left: 10px;
@@ -995,7 +992,6 @@ transform: rotate(180deg);
    &__content {
       height: 0px;
       overflow: hidden;
-      transition: .3s;
       font-size: 18px;
       line-height: 156%;
       color: #70777A;

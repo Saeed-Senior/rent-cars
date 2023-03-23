@@ -32,13 +32,9 @@ const multi = {
          "ru": 'Отправить',
          "en": 'Send',
       },
-      "main-title": {
-         "ru": 'Аренда элитных автомобилей',
-         "en": 'Luxury car rental',
-      },
       "main-btn": {
-         "ru": 'Список автомобилей',
-         "en": 'Car list',
+         "ru": 'Аренда элитных авто',
+         "en": 'Luxury car rental',
       },
       "filter-title": {
          "ru": 'Аренда элитных авто в ДУБАЕ',
@@ -208,20 +204,40 @@ const multi = {
          "ru": '1. Что включает в себя предложение по аренде автомобилей?',
          "en": '1. What does the car rental offer include?',
       },
+      "faq1txt": {
+         "ru": '...',
+         "en": '...',
+      },
       "faq2": {
          "ru": '2. Я хочу оплатить за аренду автомобиля наличными — могу ли я это сделать?',
          "en": '2. I want to pay for my car rental in cash - can I do that?',
+      },
+      "faq2txt": {
+         "ru": '...',
+         "en": '...',
       },
       "faq3": {
          "ru": '3. Какое у меня должно быть водительское удостоверение?',
          "en": '3. What type of drivers license should I have?',
       },
+      "faq3txt": {
+         "ru": 'Чтобы не попасть в затруднительную ситуацию, мы рекомендуем вам всегда иметь при себе водительское удостоверение международного образца + ваше обычное водительское удостоверение.',
+         "en": 'In order not to get into a difficult situation, we recommend that you always have an international driver\'s license + your regular driver\'s license with you.',
+      },
       "faq4": {
          "ru": '4. Я хочу взять автомобиль в аренду в нерабочее время — это возможно?',
          "en": '4. I want to rent a car after business hours - is it possible?',
       },
+      "faq4txt": {
+         "ru": '...',
+         "en": '...',
+      },
       "faq5": {
          "ru": '5. В каких случаях можно отменить сделку?',
          "en": '5. When can a transaction be cancelled?',
+      },
+      "faq5txt": {
+         "ru": '...',
+         "en": '...',
       },
    }
