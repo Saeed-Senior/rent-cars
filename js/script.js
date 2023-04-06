@@ -26,13 +26,13 @@ burger.addEventListener('click', () => {
 })
 
 //=====================================================================SCROLL
-function handleButtonClick() {
-   formMain.scrollIntoView({block: "center", behavior: "smooth"});
-   burger.classList.remove('active');
-   menuBody.classList.remove('active');
-   document.body.classList.remove('lock');
-}
-contacts.addEventListener('click', handleButtonClick);
+// function handleButtonClick() {
+//    formMain.scrollIntoView({block: "center", behavior: "smooth"});
+//    burger.classList.remove('active');
+//    menuBody.classList.remove('active');
+//    document.body.classList.remove('lock');
+// }
+// contacts.addEventListener('click', handleButtonClick);
 
 //=====================================================================GRATTITUDE
 wrap.addEventListener('click', (e) => {
@@ -73,10 +73,10 @@ item.addEventListener('click', () => {
 
 const firstSlider = new Swiper('.first-slider', {
 
-   // navigation: {
-   //    nextEl: '.swiper-button-next',
-   //    prevEl: '.swiper-button-prev',
-   // },
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
 
 });
 
